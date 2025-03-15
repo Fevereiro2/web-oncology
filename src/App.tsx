@@ -1,35 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
+import "./App.css";
+import Chatbot from "./componnents/Chat/Chatbot.tsx";
+import SlidebarPatrocinadores from "./componnents/architecture/SlidebarPartners.tsx";
 
 function App() {
-  const [count, setCount] = useState(0)
+    return (
+        <div className="App">
+            <header className="App-header">
+                <h1>Bem-vindo ao Projeto Cancer AI</h1>
+                <p>
+                    Explorando o futuro do tratamento do câncer com Inteligência
+                    Artificial.
+                </p>
+            </header>
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+            <section className="about">
+                <h2>Sobre o Projeto</h2>
+                <p>
+                    Nossa missão é utilizar IA para acelerar a descoberta de tratamentos
+                    inovadores para o câncer.
+                </p>
+            </section>
+
+            <section className="research">
+                <h2>Pesquisas Recentes</h2>
+                <ul>
+                    <li>Estudo de IA para Diagnóstico Precoce do Câncer de Mama</li>
+                    <li>Pesquisa sobre Terapias Genéticas e IA</li>
+                    <li>AI e Imunoterapia no Tratamento de Câncer</li>
+                </ul>
+            </section>
+
+            <section className="projects">
+                <h2>Projetos em Andamento</h2>
+                <div className="project-card">
+                    <h3>Projeto de Diagnóstico Precoce</h3>
+                    <p>Aplicando IA para detectar câncer em estágios iniciais.</p>
+                </div>
+            </section>
+            <SlidebarPatrocinadores/>
+            <Chatbot/>
+            <footer>
+                <p>&copy; 2025 Cancer AI - Todos os direitos reservados.</p>
+            </footer>
+        </div>
+    );
 }
 
-export default App
+export default App;
